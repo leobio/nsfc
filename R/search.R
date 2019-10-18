@@ -40,10 +40,10 @@ search <- function(url,header,search,subject,yearStart,yearEnd,
         if (!missing(subject))      url=paste0(url,"&subject=",subject)
         if (!missing(itemCategory)){
             itemCategory<-get_category(itemCategory = itemCategory)
-            url=paste0(url,"&category",itemCategory)
+            url=paste0(url,"&category=",itemCategory)
         }
-        if (!missing(fundStart))    url=paste0(url,"&fundStart",fundStart)
-        if (!missing(fundEnd))      url=paste0(url,"&fundEnd",fundEnd)
+        if (!missing(fundStart))    url=paste0(url,"&fundStart=",fundStart)
+        if (!missing(fundEnd))      url=paste0(url,"&fundEnd=",fundEnd)
         if (year_ascend){
             url=paste0(url,"&submit=list&order=searchYearEnd&orderType=asc")
         }else{
