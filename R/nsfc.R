@@ -30,10 +30,10 @@ nsfc <- function(url,header,subject,search,yearStart,yearEnd,itemCategory,fundSt
         if (!missing(subject))      url=paste0(url,"&subject=",subject)
         if (!missing(itemCategory)){
             itemCategory<-get_category(itemCategory = itemCategory)
-            url=paste0(url,"&category",itemCategory)
+            url=paste0(url,"&category=",itemCategory)
         }
-        if (!missing(fundStart))    url=paste0(url,"&fundStart",fundStart)
-        if (!missing(fundEnd))      url=paste0(url,"&fundEnd",fundEnd)
+        if (!missing(fundStart))    url=paste0(url,"&fundStart=",fundStart)
+        if (!missing(fundEnd))      url=paste0(url,"&fundEnd=",fundEnd)
         url=paste0(url,"&submit=list")
         #get total page number
         if (missing(header)) r <- GET(url)
